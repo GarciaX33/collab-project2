@@ -22,3 +22,11 @@ module.exports = function(app) {
     });
   });
 };
+
+
+db.Example.create({
+  text: "some value",
+  des: "sfdj"
+}).then(function(dbExample) {
+  res.json(dbExample);
+});
