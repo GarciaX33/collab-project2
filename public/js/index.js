@@ -1,47 +1,47 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
+var $reservationText = $("#reservation-text");
+var $reservationDescription = $("#reservation-description");
 var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $reservationList = $("#reservation-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveReservation: function(reservation) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "api/reservations",
+      data: JSON.stringify(reservation)
     });
   },
-  getExamples: function() {
+  getReservations: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/reservations",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteReservation: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/reservations/" + id,
       type: "DELETE"
     });
   }
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
+var refreshReservations = function() {
+  API.getReservations().then(function(data) {
+    var $reservations = data.map(function(reservation) {
       var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+        .text(reservation.text)
+        .attr("href", "/reservation/" + reservation.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": example.id
+          "data-id": reservation.id
         })
         .append($a);
 
@@ -89,8 +89,8 @@ var handleDeleteBtnClick = function() {
     .parent()
     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
+  API.deleteReservation(idToDelete).then(function() {
+    refreshReservations();
   });
 };
 
