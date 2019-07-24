@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
       breed: DataTypes.STRING,
       age: DataTypes.INTEGER,
       ownerName: {
-          type: DataTypesSTRING,
+          type: DataTypes.STRING,
           allowNull: false
       },
       phone: {

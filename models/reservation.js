@@ -2,14 +2,14 @@ module.exports = function(sequelize, DataTypes) {
     var Reservation = sequelize.define("Reservation", {
       checkInDate: {
         type: DataTypes.DATEONLY,
-        allowNull: false,
+        allowNull: true,
         validate: {
             isDate: true
         }
       },
       checkOutDate: {
         type: DataTypes.DATEONLY,
-        allowNull: false,
+        allowNull: true,
         validate: {
             isDate: true
         }
