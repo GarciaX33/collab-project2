@@ -24,9 +24,9 @@ module.exports = function(app) {
 };
 
 
-db.Reservation.create({
-  text: "some value",
-  des: "sfdj"
-}).then(function(dbReservation) {
-  res.json(dbReservation);
-});
+// db.Reservation.create({
+//   text: "some value",
+//   des: "sfdj"
+// }).then(function(dbReservation) {
+//   res.json(dbReservation);
+// });
