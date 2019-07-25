@@ -32,6 +32,10 @@ module.exports = function(sequelize, DataTypes) {
         Pet.hasMany(models.Reservation, {
           onDelete: "cascade"
         });
+        Pet.belongsTo(models.User, {
+          onDelete: "cascade"
+        });
       };
+
     return Pet;
   };
