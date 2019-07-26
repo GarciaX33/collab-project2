@@ -24,9 +24,9 @@ module.exports = function(app) {
 };
 
 
-db.Pet.create({
-  text: "some value",
-  des: "sfdj"
-}).then(function(dbPet) {
-  res.json(dbPet);
-});
+// db.Pet.create({
+//   text: "some value",
+//   des: "sfdj"
+// }).then(function(dbPet) {
+//   res.json(dbPet);
+// });
