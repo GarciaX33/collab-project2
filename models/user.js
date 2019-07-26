@@ -9,7 +9,7 @@ module.exports = function(sequelize, Sequelize) {
         },
  
         username: {
-            type: Sequelize.TEXT
+            type: Sequelize.STRING
         },
  
         email: {
@@ -32,13 +32,13 @@ module.exports = function(sequelize, Sequelize) {
  
     });
  
-    User.associate = function(models) {
-        // Associating pet with reservations
-        // When a pet is deleted, also delete any associated reservations
-        User.hasOne(models.Pet, {
-          onDelete: "cascade"
-        });
-      };
+    // User.associate = function(models) {
+    //     // Associating pet with reservations
+    //     // When a pet is deleted, also delete any associated reservations
+    //     User.hasOne(models.Pet, {
+    //       onDelete: "cascade"
+    //     });
+    //   };
 
     return User;
  
