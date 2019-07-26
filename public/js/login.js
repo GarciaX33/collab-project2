@@ -1,9 +1,9 @@
 $("#submit").on("click", function(event){
     event.preventDefault();
-    console.log(document.getElementById("defaultLoginFormEmail").value)
+    // console.log(document.getElementById("LoginFormEmail").value)
     var postdata = {
-        "email":document.getElementById("").value,
-        "password":document.getElementBvyId("").value
+        "email": $("#LoginFormEmail").val().trim(),
+        "password": $("#LoginFormPassword").val().trim()
     }
 
     $.ajax({
