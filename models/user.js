@@ -1,37 +1,44 @@
-module.exports = function(sequelize, Sequelize) {
+module.exports = function(sequelize, DataTypes) {
  
     var User = sequelize.define('user', {
  
-        id: {
-            autoIncrement: true,
-            primaryKey: true,
-            type: Sequelize.INTEGER
-        },
- 
         username: {
+
+            type: DataTypes.STRING
+
             type: Sequelize.STRING
+
         },
  
         email: {
-            type: Sequelize.STRING,
+            type: DataTypes.STRING,
             validate: {
                 isEmail: true
             }
         },
  
         password: {
-            type: Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
  
         status: {
-            type: Sequelize.ENUM('active', 'inactive'),
+            type: DataTypes.ENUM('active', 'inactive'),
             defaultValue: 'active'
         }
  
  
     });
  
+
+    User.associate = function(models) {
+        // Associating pet with reservations
+        // When a pet is deleted, also delete any associated reservations
+        User.hasMany(models.Reservation, {
+          onDelete: "cascade"
+        });
+      };
+
     // User.associate = function(models) {
     //     // Associating pet with reservations
     //     // When a pet is deleted, also delete any associated reservations
@@ -39,6 +46,7 @@ module.exports = function(sequelize, Sequelize) {
     //       onDelete: "cascade"
     //     });
     //   };
+
 
     return User;
  

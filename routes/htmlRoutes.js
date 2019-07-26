@@ -20,14 +20,9 @@ module.exports = function(app) {
     });
   });
 
-
-  app.get ("/login", function(req, res){
-    res.render("login.handlebars", {}) 
-
   app.get("/reservation", function(req, res){
     res.render("reservation")
-
-  })
+  });
 
   
 
@@ -35,4 +30,4 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-};
+  }

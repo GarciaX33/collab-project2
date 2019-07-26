@@ -26,6 +26,15 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
 
+
+    // Pet.associate = function(models) {
+    //     // Associating pet with reservations
+    //     // When a pet is deleted, also delete any associated reservations
+    //     Pet.hasMany(models.Reservation, {
+    //       onDelete: "cascade"
+    //     });
+    //   };
+
     Pet.associate = function(models) {
         // Associating pet with reservations
         // When a pet is deleted, also delete any associated reservations
@@ -34,6 +43,7 @@ module.exports = function(sequelize, DataTypes) {
         });
         //
       };
+
 
     return Pet;
   };
