@@ -21,6 +21,9 @@ module.exports = function(app) {
       res.json(dbPet);
     });
   });
+
+};
+
 };
 
 
@@ -30,3 +33,4 @@ module.exports = function(app) {
 // }).then(function(dbPet) {
 //   res.json(dbPet);
 // });
+
