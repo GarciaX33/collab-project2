@@ -1,17 +1,87 @@
-<div class="container">
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
-        <div class="card-body">
-          <h5 class="card-title">Reservation</h5>
-          <p>
-            <strong>Check-In Date</strong>: {{reservation.checkInDate}}</p>
-          <p>
-          <p>
-            <strong>Check-Out Date</strong>: {{reservation.checkOutDate}}</p>
-            <a href="/">← Back To Home</a>
-        </div>
-      </div>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Reservation</h1>
+      <h3>gimme your money!</h3>
+      <hr>
+      <a href="/" class="btn btn-danger btn-lg">
+        <span class="fa fa-eye"></span> Home</a>
+      <a href="/" class="btn btn-danger btn-lg">
+        <span class="fa fa-th-list"></span> Log Out</a>
     </div>
-  </div>
-</div>
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="card" id="bookAppointment">
+          <div class="card-header">
+            Book Appointment
+          </div>
+          <div class="card-body">
+            <form action="" method="POST" role="form">
+
+
+              <!-- Drop down menu of what type of pets to pick from  -->
+              <div class="form-group">
+                <label for="pwd">Select Pet</label>
+                <select id="selectPet" class="custom-select" aria-labelledby="dropdownMenuButton">
+                  <option selected value="Bird">Bird</option>
+                  <option value="Lizard" selected>Lizard</option>
+                  <option value="Cat">Cat</option>
+                  <option value="Dog">Dog</option>
+                </select>
+              </div>
+
+
+              <div class="form-group">
+                <label for="">Start Date</label>
+                <input type="date" class="form-control" id="start" placeholder="">
+
+              </div>
+
+              <div class="form-group">
+                <label for="">End Date</label>
+                <input type="date" class="form-control" id="end" placeholder="">
+              </div>
+            </form>
+            <br>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary btn-md" id="add-btn">
+                <span class="fa fa-fire"></span> Book Now</button>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card" id="resDetail">
+              <div class="card-header">
+                <h2>Reservation Details</h2>
+              </div>
+              <div class="card-body" id="well-section">
+                <p>Pet Type:</p>
+                <div id="con-pet"></div> <!-- User start date/end date will go in here -->
+              </div>
+
+              <div class="card-body" id="well-section">
+                <p>Start Date:</p>
+                <div id="con-pet2"></div> <!-- User start date/end date will go in here -->
+              </div>
+
+              <div class="card-body" id="well-section">
+                <p>End Date:</p>
+                <div id="con-pet3"></div> <!-- User start date/end date will go in here -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <footer>
+
+
+        </footer>
+
+        <script src="js/reservation.js" type="text/javascript"></script>
