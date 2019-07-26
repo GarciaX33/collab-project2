@@ -21,4 +21,16 @@ module.exports = function(app) {
       res.json(dbPet);
     });
   });
+
 };
+
+};
+
+
+// db.Pet.create({
+//   text: "some value",
+//   des: "sfdj"
+// }).then(function(dbPet) {
+//   res.json(dbPet);
+// });
+
