@@ -20,17 +20,12 @@ module.exports = function(app) {
     });
   });
 
-
-  app.get ("/login", function(req, res){
-    res.render("login.handlebars", {}) 
-
   app.get("/reservation", function(req, res){
     res.render("reservation")
-
-  })
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
   });
-};
+  }
