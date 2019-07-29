@@ -18,16 +18,16 @@ module.exports = function(sequelize, DataTypes) {
       
     });
 
-    // Reservation.associate = function(models) {
-    //     // We're saying that a reservation should belong to an pet
-    //     // A reservation can't be created without a pet due to the foreign key constraint
-    //     Reservation.belongsTo(models.User, {
-    //       foreignKey: {
-    //         allowNull: false
-    //       }
-    //     });
+    Reservation.associate = function(models) {
+        // We're saying that a reservation should belong to an pet
+        // A reservation can't be created without a pet due to the foreign key constraint
+        Reservation.belongsTo(models.Pet, {
+          foreignKey: {
+            allowNull: false
+          }
+        });
 
-    //   };
+      };
       
     return Reservation;
   };

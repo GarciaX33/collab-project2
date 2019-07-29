@@ -6,8 +6,6 @@ module.exports = function(sequelize, DataTypes) {
 
             type: DataTypes.STRING
 
-            type: Sequelize.STRING
-
         },
  
         email: {
@@ -34,18 +32,10 @@ module.exports = function(sequelize, DataTypes) {
     User.associate = function(models) {
         // Associating pet with reservations
         // When a pet is deleted, also delete any associated reservations
-        User.hasMany(models.Reservation, {
+        User.hasMany(models.Pet, {
           onDelete: "cascade"
         });
       };
-
-    // User.associate = function(models) {
-    //     // Associating pet with reservations
-    //     // When a pet is deleted, also delete any associated reservations
-    //     User.hasOne(models.Pet, {
-    //       onDelete: "cascade"
-    //     });
-    //   };
 
 
     return User;
