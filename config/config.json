@@ -1,10 +1,7 @@
 {
   "development": {
-
-    "password": "summer051597",
-
-    "password": "pass33",
-
+    "username": "root",
+    "password": "password",
     "database": "pets_db",
     "port": 3306,
     "host": "localhost",
