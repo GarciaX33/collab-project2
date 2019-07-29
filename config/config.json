@@ -1,15 +1,9 @@
 {
   "development": {
     "username": "root",
-
-    "password": "Tomorrow1074",
-    "database": "pets_db",
-    "port": 3306,
-
     "password": "root",
-    "port": 8889,
     "database": "pets_db",
-
+    "port": 8889,
     "host": "localhost",
     "dialect": "mysql"
   },
