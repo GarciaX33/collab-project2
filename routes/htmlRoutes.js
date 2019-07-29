@@ -19,10 +19,14 @@ module.exports = function(app) {
       });
     });
   });
-
+  //Reservation
   app.get("/reservation", function(req, res){
     res.render("reservation")
+
+  })
+
   });
+
 
   
 
