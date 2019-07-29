@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "Tomorrow1074",
     "database": "pets_db",
     "port": 3306,
     "host": "localhost",
