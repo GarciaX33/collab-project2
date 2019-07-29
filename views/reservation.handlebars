@@ -28,13 +28,20 @@
               <div class="form-group">
                 <label for="pwd">Select Pet</label>
                 <select id="selectPet" class="custom-select" aria-labelledby="dropdownMenuButton">
+
                   <option selected value="Bird">Bird</option>
                   <option value="Reptile" selected>Reptile</option>
                   <option value="Cat">Cat</option>
                   <option value="Dog">Dog</option>
                   <option value="Rat">Rat</option>
                   <option value="Ferret">Ferret</option>
+
+                  {{#each pets}}
+                  <option  value ="{{id}}">{{petName}}</option>
+                  {{/each}}
+
                 </select>
+
               </div>
 
               <div class="form-group">
@@ -71,7 +78,7 @@
               </div>
               <div class="card-body" id="well-section">
                 <p>Pet Type:</p>
-                <div id="con-pet"></div> <!-- User start date/end date will go in here -->
+                <div id="con-pet" data-id="0"></div> <!-- User start date/end date will go in here -->
               </div>
 
               <div class="card-body" id="well-section">
@@ -86,8 +93,8 @@
 
 
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#exampleModal">
-                Confirm or Delete
+              <button type="button" class="btn btn-danger btn-lg" id="confirmRes">
+                Confirm
               </button>
               
               <!-- Confirmation Modal -->
@@ -105,8 +112,8 @@
                       Are you ready to book your reservation?
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">No, Delete</button>
-                      <button type="button" class="btn btn-secondary">Yes, Confirm</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" id= "ddeleteRes">No, Delete</button>
+                      <button type="button" class="btn btn-secondary" id="dconfirmRes">Yes, Confirm</button>
                     </div>
                   </div>
                 </div>
