@@ -19,11 +19,22 @@ module.exports = function(app) {
       });
     });
   });
+  
   //Reservation
   app.get("/reservation", function(req, res){
 
     res.render("reservation")
 
+  })
+
+  //Contact Us
+  app.get("/contact", function (req, res) {
+    res.render("contact")
+  })
+
+  //About Us
+  app.get("/aboutus", function (req, res) {
+    res.render("aboutus")
   })
 
   app.get("/contact", function(req, res){
@@ -32,6 +43,7 @@ module.exports = function(app) {
 
 
   
+
 
     //db.Pet.findAll({where:{UserId:req.user.id}}).then(function(petData){
       var petData=[{id:1,petName:"Larry"},{id:2,petName:"Moe"},{id:3,petName:"Susie Q"}];
