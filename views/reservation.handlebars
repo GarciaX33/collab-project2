@@ -28,9 +28,18 @@
               <div class="form-group">
                 <label for="pwd">Select Pet</label>
                 <select id="selectPet" class="custom-select" aria-labelledby="dropdownMenuButton">
+
+                  <option selected value="Bird">Bird</option>
+                  <option value="Reptile" selected>Reptile</option>
+                  <option value="Cat">Cat</option>
+                  <option value="Dog">Dog</option>
+                  <option value="Rat">Rat</option>
+                  <option value="Ferret">Ferret</option>
+
                   {{#each pets}}
                   <option  value ="{{id}}">{{petName}}</option>
                   {{/each}}
+
                 </select>
 
               </div>
