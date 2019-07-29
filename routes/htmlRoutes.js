@@ -19,10 +19,11 @@ module.exports = function(app) {
       });
     });
   });
-
+  //Reservation
   app.get("/reservation", function(req, res){
     res.render("reservation")
   })
+  
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

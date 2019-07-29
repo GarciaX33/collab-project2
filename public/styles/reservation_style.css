@@ -1,0 +1,27 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color:black;
+  text-align: center;
+  background-color: indianred;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h4 {
+  font-size: 45px;
+}
+
+
+label{
+  font-size: 25px;
+}
