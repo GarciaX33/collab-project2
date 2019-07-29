@@ -1,9 +1,56 @@
-<h1>Sign In Form</h1>
 
-<form id="signin" name="signin" method="post" action="signin">
-        <label for="email">Email Address</label>
-        <input class="text" name="email" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign In" />
-    </form>
+
+<!-- Default form login -->
+<form id="signin" class="text-center border border-light p-5" name="signin" method="POST" action="/signin">
+
+    <p class="h4 mb-4">Sign in</p>
+
+    <!-- Email -->
+    <input type="email" id="LoginFormEmail" class="form-control mb-4" placeholder="E-mail" name="email">
+
+    <!-- Password -->
+    <input type="password" id="LoginFormPassword" class="form-control mb-4" placeholder="Password" name="password">
+
+    <div class="d-flex justify-content-around">
+        <div>
+            <!-- Remember me -->
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+            </div>
+        </div>
+        <div>
+            <!-- Forgot password -->
+            <a href="#">Forgot password?</a>
+        </div>
+    </div>
+
+    <!-- Sign in button -->
+    <input class="btn btn-info btn-block my-4" id="submit" type="submit">Sign In</input>
+
+    <!-- Register -->
+    <p>New user?
+        <a href="/signup">Sign Up Here</a>
+    </p>
+
+    <!-- Social login -->
+    {{!-- <p>or sign in with:</p>
+
+    <a type="button" class="light-blue-text mx-2">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+        <i class="fab fa-github"></i>
+    </a> --}}
+
+</form>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/login.js"></script>
+<!-- Default form login -->
