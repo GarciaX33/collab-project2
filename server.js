@@ -13,7 +13,7 @@ var session    = require('express-session');
 //load passport strategies
 require('./config/passport/passport.js')(passport, db.user);
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -49,7 +49,7 @@ require("./routes/htmlRoutes")(app);
 
 
 // true drops tables and recreates them
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`

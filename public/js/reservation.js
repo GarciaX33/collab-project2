@@ -27,7 +27,7 @@ $("#confirmRes").on("click",function(){
     }
     console.log(postdata)
     $.ajax({
-        url: "/api/reservations",
+        url: "/api/reservation",
         method: "POST",
         data: postdata
     }).then(function (data) {
