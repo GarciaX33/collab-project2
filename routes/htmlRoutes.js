@@ -21,13 +21,12 @@ module.exports = function(app) {
   });
   //Reservation
   app.get("/reservation", function(req, res){
-    res.render("reservation")
-
-  })
-
-
-
-
+    //db.Pet.findAll({where:{UserId:req.user.id}}).then(function(petData){
+      var petData=[{id:1,petName:"Larry"},{id:2,petName:"Moe"},{id:3,petName:"Susie Q"}];
+      res.render("reservation",{"pets":petData})
+   // });
+    
+  });
   
 
   // Render 404 page for any unmatched routes
