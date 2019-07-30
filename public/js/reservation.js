@@ -31,9 +31,15 @@ $("#confirmRes").on("click",function(){
         method: "POST",
         data: postdata
     }).then(function (data) {
-        console.log(data)
+        // console.log(data)
+        $("#exampleModal").modal('show');
     })
 });
+
+// close pop up modal
+$("#deleteRes").click(function(){
+    $('#exampleModal').modal('hide');
+})
 
 
 
