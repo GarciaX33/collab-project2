@@ -23,10 +23,10 @@ module.exports = function(app) {
   // Reservation
   app.get("/reservation", function(req, res){
 
-    db.Pet.findAll({where:{UserId:req.user.id}}).then(function(petData){
+    db.Pet.findAll({where:{UserId:1}}).then(function(petData){
       //var petData=[{id:1,petName:"Larry"},{id:2,petName:"Moe"},{id:3,petName:"Susie Q"}];
 
-    res.render("reservation")
+    res.render("reservation", {"pets": petData})
   })
   });
   //Contact Us
